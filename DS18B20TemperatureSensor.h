@@ -16,4 +16,7 @@ class DS18B20TemperatureSensor : public INDI::Weather
     protected:
         bool Handshake() override;
         virtual IPState updateWeather() override;
+
+    private:
+        char m_devPath[128]; // Path to device
 };
